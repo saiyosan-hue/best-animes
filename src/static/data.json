@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "titlerussian": "Необъятный океан",
+    "titlejapanese": "Grand Blue",
+    "season": "лето-2018",
+    "genres": ["комедия", "повседневность"],
+    "poster-url": "/assets/grandblue-tv-1.jpg",
+    "about": ""
+  },
+  {
+    "id": 1,
+    "titlerussian": "Необъятный океан TV-2",
+    "titlejapanese": "Grand Blue TV-2",
+    "season": "лето-2025",
+    "genres": ["комедия", "повседневность"],
+    "poster-url": "/assets/grandblue-tv-2.jpg",
+    "about": ""
+  }
+]
