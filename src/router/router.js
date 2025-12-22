@@ -8,22 +8,22 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/tv',
-    name: 'TV',
-    // Ленивая загрузка компонента
-    component: () => import('../views/TV.vue')
-  },
-  {
-    path: '/films',
-    name: 'Фильмы',
-    // Ленивая загрузка компонента
-    component: () => import('../views/Films.vue')
-  },
-  {
     path: '/useful-links',
     name: 'Полезные ссылки',
     // Ленивая загрузка компонента
     component: () => import('../views/UsefulLinks.vue')
+  },
+  {
+    path: '/:id/:slug',
+    name: 'filterAnime.show',
+    component: () => import('../views/Filter.vue'),
+    props: route=> ({...route.params, id: parseInt(route.params.id)})
+  },
+  {
+    path: '/:id/:slug/:animeSlug',
+    name: 'anime.show',
+    component: () => import('../views/OneTitle.vue'),
+    props:  route=> ({...route.params, id: parseInt(route.params.id)})
   }
 ]
 

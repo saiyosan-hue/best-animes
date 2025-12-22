@@ -20,10 +20,10 @@
           </v-row>
           <v-row  justify="center">
             <v-col lg="3" md="4" sm="12" xs="12">
-              <v-btn  rounded="xl" text="Посмотреть долго" router-link to="/tv"></v-btn>
+              <v-btn  rounded="xl" text="Посмотреть на неделю" router-link to="/1/tv"></v-btn>
             </v-col>
             <v-col lg="3" md="4" sm="12" xs="12">
-              <v-btn  rounded="xl" text="Посмотреть на вечер" router-link to="/films"></v-btn>
+              <v-btn  rounded="xl" text="Посмотреть на вечер" router-link to="/2/films"></v-btn>
             </v-col>
             <v-col lg="3" md="4" sm="12" xs="12">
               <v-btn  rounded="xl" text="Найти и почитать" router-link to="/useful-links"></v-btn>

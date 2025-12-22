@@ -1,3 +1,12 @@
+<script setup>
+    import { ref, watch } from 'vue'
+    const drawer = ref(false)
+    const group = ref(null)
+    watch(group, () => {
+        drawer.value = false
+    })
+</script>
+
 <template>
     <v-app-bar :elevation="2">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -17,36 +26,27 @@
         :location="$vuetify.display.mobile ? 'top' : undefined"
         temporary
       >
-    <v-list><v-list-item v-for="item in items" router-link :to="item.value" :key="item.title"><v-list-title>{{ item.title }}</v-list-title></v-list-item></v-list>
+    <v-list>
+        <v-list-item router-link to="/">
+            <v-list-item-title>Главная</v-list-item-title>
+        </v-list-item>
+        <v-list-item v-for="filterAnime in filterAnimes" router-link :to="{name:'filterAnime.show', params:{id: filterAnime.id, slug: filterAnime.slug}}" :key="filterAnime.id">
+            <v-list-item-title>{{ filterAnime.name }}</v-list-item-title>
+        </v-list-item>
+        <v-list-item router-link to="/useful-links">
+            <v-list-item-title>Полезные ссылки</v-list-item-title>
+        </v-list-item>
+    </v-list>
     </v-navigation-drawer>
 </template>
 
-<script setup>
-    import { ref, watch } from 'vue'
-
-  const items = [
-    {
-      title: 'Главная',
-      value: '/',
-    },  
-    {
-      title: 'TV',
-      value: 'tv',
-    },
-    {
-      title: 'Фильмы',
-      value: 'films',
-    },
-    {
-      title: 'Полезные ссылки',
-      value: 'useful-links',
+<script>
+import sourceData from '../static/data.json'
+    export default {
+        data () {
+            return {
+                filterAnimes: sourceData.filterAnimes
+            }
+        }
     }
-  ]
-
-  const drawer = ref(false)
-  const group = ref(null)
-
-  watch(group, () => {
-    drawer.value = false
-  })
 </script>
