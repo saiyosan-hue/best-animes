@@ -47,7 +47,7 @@
         :location="$vuetify.display.mobile ? 'bottom' : undefined"
         temporary
       >
-    <v-list><v-list-item v-for="item in items" link :href="item.value"><v-list-title>{{ item.title }}</v-list-title></v-list-item></v-list>
+    <v-list><v-list-item v-for="item in items" link :href="item.value" :key="item.title"><v-list-title>{{ item.title }}</v-list-title></v-list-item></v-list>
     </v-navigation-drawer>
 
     <v-main class="d-flex align-center justify-center">
