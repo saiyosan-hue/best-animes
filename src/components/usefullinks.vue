@@ -32,7 +32,7 @@
 <template>
     <v-card v-for="link in usefulLinks" link :href="link.websiteurl" target="_blank" :key="link.id" class="ma-3">
         <v-avatar size="36px" class="ma-3">
-            <img contain :src="`../assets/${link.logo}`" alt="Logo">
+            <img contain :src="`./src/assets/${link.logo}`" alt="Logo">
         </v-avatar>
         <v-card-title>{{ link.name }}</v-card-title>
         <v-card-text>{{link.description}}</v-card-text>

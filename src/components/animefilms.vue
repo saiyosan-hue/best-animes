@@ -69,7 +69,7 @@
         <v-card>
           <v-row no-gutters>
             <v-col xs="12">
-          <img contain :src="`../assets/${anime.posterUrl}`" width="200px" height="300px" class="ma-3"> 
+          <img contain :src="`./src/assets/${anime.posterUrl}`" width="200px" height="300px" class="ma-3"> 
             </v-col>
             <v-col>
           <v-card-title >{{anime.titlerussian}}</v-card-title>  

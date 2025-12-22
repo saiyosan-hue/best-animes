@@ -5,13 +5,16 @@ import App from './App.vue'
 import { createVuetify } from 'vuetify'
 import 'vuetify/styles' // Базовые стили Vuetify
 import '@mdi/font/css/materialdesignicons.css' // Иконки
-import AnimeCard from './components/animes.vue'
+import router from './router/router'
+//import { createRouter, createWebHistory } from 'vue-router'
 
 const vuetify = createVuetify({
     // Здесь можно добавить начальную тему и параметры
 })
 
+
+
 const app = createApp(App)
 app.use(vuetify)
-app.component('AnimeCard', AnimeCard)
+app.use(router)
 app.mount('#app')
