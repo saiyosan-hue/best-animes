@@ -19,14 +19,14 @@
             </v-col>
           </v-row>
           <v-row  justify="center">
-            <v-col lg="3" md="4" sm="12" xs="12">
-              <v-btn  rounded="xl" text="Посмотреть на неделю" router-link to="/1/tv"></v-btn>
+            <v-col lg="3" md="4" sm="6" xs="12">
+              <v-btn class="bg-pink-lighten-5" rounded="xl" text="Посмотреть на неделю" router-link to="/1/tv"></v-btn>
             </v-col>
-            <v-col lg="3" md="4" sm="12" xs="12">
-              <v-btn  rounded="xl" text="Посмотреть на вечер" router-link to="/2/films"></v-btn>
+            <v-col lg="3" md="4" sm="6" xs="12">
+              <v-btn class="bg-pink-lighten-5" rounded="xl" text="Посмотреть на вечер" router-link to="/2/films"></v-btn>
             </v-col>
-            <v-col lg="3" md="4" sm="12" xs="12">
-              <v-btn  rounded="xl" text="Найти и почитать" router-link to="/useful-links"></v-btn>
+            <v-col lg="3" md="4" sm="6" xs="12">
+              <v-btn class="bg-pink-lighten-5" rounded="xl" text="Найти и почитать" router-link to="/useful-links"></v-btn>
             </v-col>
           </v-row>
       </v-container>

@@ -1,6 +1,7 @@
 <template>
     <v-container>
     <h1 class="mt-15 pa-3 text-pink">{{filterAnime.name}}</h1>
+    <GoBack />
     <v-row  class="fill-height">
       <v-col  v-for="anime in filterAnime.animes" :key="anime.slug" lg="4" md="6" sm="12" xs="12">
         <v-card>
@@ -12,7 +13,7 @@
           <router-link class="text-decoration-none"
           :to="{name: 'anime.show', params: {animeSlug: anime.slug}}"
           >
-          <v-card-title class="text-pink" >{{anime.titlerussian}}</v-card-title>
+          <v-card-title class="animelink" >{{anime.titlerussian}}</v-card-title>
         </router-link>  
           <v-card-subtitle>{{anime.titlejapanese}}</v-card-subtitle>
             <v-chip class="ma-2" v-for="genre in anime.genres" :key="genre.idG">{{genre.genreName}}</v-chip>
@@ -32,13 +33,16 @@
         </v-card>
       </v-col>
       </v-row>
+      <GoBack />
     </v-container>  
 </template>
 
 <script>
-    import sourceData from '../static/data.json'
+    import sourceData from '../static/data.json';
+    import GoBack from '../components/GoBack.vue';
 
 export default {
+    components: {GoBack},
     props: {
        id: {type: Number, required: true} 
     },
@@ -52,6 +56,12 @@ export default {
 
 <style>
   .animelink {
-
+    color: #E91E63;
+  }
+  .animelink:hover {
+    color: #F48FB1;
+  }
+  .animelink:active {
+    color: #AD1457;
   }
 </style>

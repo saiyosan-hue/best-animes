@@ -1,5 +1,7 @@
 <script>
+  import GoBack from '../components/GoBack.vue';
   export default {
+    components: {GoBack},
     name: "UsefulLinks",
     data: () => ({
       usefulLinks: [
@@ -39,5 +41,6 @@
         <v-card-title>{{ link.name }}</v-card-title>
         <v-card-text>{{link.description}}</v-card-text>
     </v-card>
+    <GoBack />
     </v-container>
 </template>

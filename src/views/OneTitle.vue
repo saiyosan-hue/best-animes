@@ -1,10 +1,10 @@
 <template>
     <v-container>
-        <h1 class="mt-15 pa-3">{{anime.titlerussian}}</h1>
+        <h1 class="mt-15 pa-3 text-pink">{{anime.titlerussian}}</h1>
         <h3 class="pl-3 mb-3">{{anime.titlejapanese}}</h3>
             <v-row no-gutters>
-                <v-col lg="3" md="3" sm="4" xs="12">
-                    <img contain :src="`../../../src/assets/${anime.posterUrl}`" width="200px" height="300px" class="ma-3"> 
+                <v-col lg="3" md="4" sm="5" xs="12">
+                    <img contain :src="`../../../src/assets/${anime.posterUrl}`" width="240px" height="360px" class="ma-3"> 
                 </v-col>
                 <v-col>  
                     <v-card-subtitle></v-card-subtitle>
@@ -14,13 +14,17 @@
                     <p>{{anime.about}}</p>
                 </v-col>
             </v-row>
+            <GoBack />
     </v-container>
+    
 </template>
 
 <script>
-import sourceData from '../static/data.json'
+import sourceData from '../static/data.json';
+import GoBack from '../components/GoBack.vue';
 
 export default {
+    components: {GoBack},
     props:{
       id: {type: Number, required: true},
       animeSlug: {type: String, required: true}
