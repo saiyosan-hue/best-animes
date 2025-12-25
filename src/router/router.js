@@ -20,6 +20,12 @@ const routes = [
     component: () => import('../views/UsefulLinks.vue')
   },
   {
+    path: '/small-game',
+    name: 'Мини-игра',
+    // Ленивая загрузка компонента
+    component: () => import('../views/SmallGame.vue')
+  },
+  {
     path: '/:id/:slug',
     name: 'filterAnime.show',
     component: () => import('../views/Filter.vue'),

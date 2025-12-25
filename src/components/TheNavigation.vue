@@ -36,6 +36,9 @@
         <v-list-item router-link to="/useful-links">
             <v-list-item-title>Полезные ссылки</v-list-item-title>
         </v-list-item>
+        <v-list-item router-link to="/small-game">
+            <v-list-item-title>Мини-игра</v-list-item-title>
+        </v-list-item>
     </v-list>
     </v-navigation-drawer>
 </template>
